@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* 버튼 */
+
+#about .about-cont4 .profile-btn {
+    text-align: center;
+    transform: scale(0);
+    opacity: 0;
+}
+#about .about-cont4 .profile-btn a, .advan-btn a, #port2 .publi-wrap .publi-btn a, #contact .contact-cont2 .contact-btn button {
+    display: inline-block;
+    position: relative;
+    transition: opacity .3s, z-index .3s ease, transform .3s;
+}
+#about .about-cont4 .profile-btn a span, .advan-btn a span, #port2 .publi-wrap .publi-btn a span, #contact .contact-cont2 .contact-btn button span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    border: 5px solid #000;
+    background-color: #0eff86;
+    color: #000;
+    padding: 4px 25px;
+    width: 80px;
+}
+#about .about-cont4 .profile-btn a::before, .advan-btn a::before, #port2 .publi-wrap .publi-btn a::before, #contact .contact-cont2 .contact-btn button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: 8px;
+    height: 100%;
+    left: -15px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#000 5px,#000 10px,transparent 10px);
+    background-size: 8px 14px;
+    background-position: 0 100%;
+}
+
+#about .about-cont4 .profile-btn a::after, .advan-btn a::after, #port2 .publi-wrap .publi-btn a::after, #contact .contact-cont2 .contact-btn button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: calc(100% - 10px);
+    height: 8px;
+    left: -8px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#000 5px,#000 10px,transparent 10px);
+    background-size: 14px 8px;
+}
+#about .about-cont4 .profile-btn a:hover, .advan-btn a:hover, #port2 .publi-wrap .publi-btn a:hover, #contact .contact-cont2 .contact-btn button:hover {
+    transform:translate(-15px,15px);
+}
+#about .about-cont4 .profile-btn a:hover::before, #about .about-cont4 .profile-btn a:hover::after, .advan-btn a:hover::before, .advan-btn a:hover::after,
+#port2 .publi-wrap .publi-btn a:hover::before, #port2 .publi-wrap .publi-btn a:hover::after, #contact .contact-cont2 .contact-btn button:hover::before, #contact .contact-cont2 .contact-btn button:hover::after {
+    transform:translate(15px,-15px);
+}
+
+/* 장점 버튼 다른 부분 */
+
+.advan-btn a {margin:30px 20px; text-align: center; cursor: auto;}
+#about .advan-text-wrap .advan-btn a span {padding-left: 25px; font-size: 14px; font-family: 'JSDongkang-Bold';  padding: 3px 25px; width: 80px; letter-spacing: 0.25px;}
+
+/* //장점 버튼 다른 부분 */
+
+#about .advan-text-wrap div.advan-btn {
+    transform: translate(0px, 500px);
+}
+
+/* 퍼블리싱 버튼 */
+#port2 .publi-wrap .publi-btn {
+    margin-left: 17px;
+    position: absolute;
+    bottom: 25px;
+    width: 75%;
+    /* 스크롤 등장 */
+    opacity: 0;
+    transform: translate(0px, 20px)
+}
+
+#port2 .publi-wrap .publi-box.reverse .publi-btn {
+    margin-left: calc(20% + 15px);
+}
+
+#port2 .publi-wrap .publi-btn a {
+    cursor: pointer;
+    width: 90%;
+}
+#port2 .publi-wrap .publi-btn a span {
+    border: 5px solid #939393;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 25px 4px;
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+}
+
+#port2 .publi-btn a span {
+    color:#fff;
+}
+
+#port2 .publi-wrap .publi-btn a::before, #port2 .publi-wrap .publi-btn a::after {
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#939393 5px,#939393 10px,transparent 10px);
+}
+
+/* 폼 버튼 */
+
+#contact .contact-cont2 .contact-btn {
+    text-align: center;
+}
+#contact .contact-cont2 .contact-btn button {
+    cursor: pointer;
+}
+#contact .contact-cont2 .contact-btn button span {
+    padding: 5px 25px 4px;
+}
+
+
+/* 스킬 배너 */
+#skill-banner .skill-banner-cont {
+    text-align: center;
+    padding-top: 3.5vh;
+}
+
+/* 애니메이션 자바스크립트 사이 배너 */
+#work-banner .work-banner-cont {
+    text-align: center;
+    padding-top: 7.5vw;
+    padding-bottom: 5vw;
+}
+
+#skill-banner .skill-banner-cont h2, #work-banner .work-banner-cont h2 {
+    font-size: 20px;
+    margin-bottom: 5vw;
+}
+
+#skill-banner .skill-banner-cont .skill-banner-text-wrap, #work-banner .work-banner-cont .work-banner-text-wrap {
+    overflow: hidden;
+    white-space:nowrap;
+   
+}
+#skill-banner .skill-banner-cont .skill-banner-text-wrap div, #work-banner .work-banner-cont .work-banner-text-wrap div {
+    display: inline-block;
+    animation: textLoop 25s linear infinite;
+}
+
+#skill-banner .skill-banner-cont .skill-banner-text-wrap span, #work-banner .work-banner-cont .work-banner-text-wrap span { 
+    font-family: 'Alata';
+    font-size: 16px;
+    white-space: nowrap;
+    margin: 0 2.1vw;
+    display: inline-block;
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+#skill-banner .skill-banner-cont .skill-banner-text-wrap span:hover, #work-banner .work-banner-cont .work-banner-text-wrap span:hover {
+    transform:rotate(-4deg);
+    -webkit-animation:67ms twitchup;
+    animation:67ms twitchup;
+}
+
+/* 애니메이션 */
+@keyframes twitchup{
+    60%{
+        transform:rotate(-6deg)
+    }
+    100%{
+        transform:rotate(-4deg)
+    }
+}
+
+@keyframes textLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width:1450px) { 
+    #port2 .publi-wrap .publi-box.reverse .publi-btn {margin-left: calc(5% + 15px);}
+}
+
+@media (max-width:1220px) {
+    #port2 .publi-wrap .publi-btn a span {padding: 5px 15px 4px;}
+}
+@media (max-width:1025px) {
+    #port2 .publi-wrap .publi-btn {position: initial; display: inline-block; width: 92%;}
+    #port2 .publi-wrap .publi-box.reverse .publi-btn {margin-left: 15px;}
+    #port2 .publi-wrap .publi-btn a {width: 92%;}
+    #port2 .publi-wrap .publi-btn a span {width: 92%;}
+}
+@media (max-width:480px) {
+    #about .about-cont4 .profile-btn a span, .advan-btn a span {width: auto;}
+    #about .advan-text-wrap .advan-btn a span {width: auto;}
+
+    #port2 .publi-wrap .publi-btn {width: 90%;}
+    #port2 .publi-wrap .publi-btn a span {width: 90%;}
+}

@@ -1,0 +1,612 @@
+<?php 
+    include 'assets/connect/connect.php';
+    include 'assets/connect/session.php';
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="yeong">
+    <meta name="description" content="퍼블리셔 포트폴리오">
+    <meta name="keywords" content="반응형사이트, 웹퍼블리셔, 포트폴리오">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>김영지 포트폴리오</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/btn.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="퍼블리셔 포트폴리오 사이트 만들기" />
+    <meta property="og:url" content="http://www.yjshop.net/port/index3.html" />
+    <meta property="og:image" content="http://www.yjshop.net/portfolio/responsive/icon/icon.png" />
+    <meta property="og:site_name" content="김영지 포트폴리오" />
+    <meta property="og:description" content="웹퍼블리셔 김영지 포트폴리오" />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yeong" />
+    <meta name="twitter:title" content="퍼블리셔 포트폴리오 사이트 만들기" />
+    <meta name="twitter:description" content="웹퍼블리셔 김영지 포트폴리오" />
+    <meta property="twitter:image" content="http://www.yjshop.net/portfolio/responsive/icon/icon.png" />
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+    <div class="scroll">0</div> 
+    <!-- 로딩페이지 -->
+    <div class="progress">
+        <span class="progress-text">0</span>
+        <div class="porgress-ani">
+            <div class="loading">
+                <div class="load">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="load">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="load">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="load">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div id="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="index3.html"><span>Yeong's</span></a>
+            </div>
+            <!-- 회원가입 로그인 게시판 -->
+            <?php 
+                include 'assets/include/header.php';
+             ?>
+            <nav class="menu">
+                <div class="nav">
+                    <div class="nav-background">
+                        <div class="nav-bg nav-bg1"></div>
+                        <div class="nav-bg nav-bg2"></div>
+                        <div class="nav-bg nav-bg3"></div>
+                        <div class="nav-bg nav-bg4"></div>
+                    </div>
+                    <h2 class="blind">메인 메뉴</h2>
+                    <ul>
+                        <li><a href="#main">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#port2T">portfolio</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+                <!-- 햄버거버튼 -->
+                <div class="menu-line">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="hamburger-close">
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <main id="contents">
+        <!-- 메인 컨텐츠 -->
+        <section id="main">
+            <div class="container">
+                <div class="main-cont">
+                    <div class="main-text-wrap">
+                        <p>
+                            <span class="main-t1" aria-hidden="true">W</span><span class="main-t1" aria-hidden="true">e</span><span class="main-t1" aria-hidden="true">b</span>
+                            <span class="main-t1" aria-hidden="true">p</span><span class="main-t1" aria-hidden="true">u</span><span class="main-t1" aria-hidden="true">b</span><span class="main-t1" aria-hidden="true">l</span><span class="main-t1" aria-hidden="true">i</span><span class="main-t1" aria-hidden="true">s</span><span class="main-t1" aria-hidden="true">h</span><span class="main-t1" aria-hidden="true">e</span><span class="main-t1" aria-hidden="true">r</span>
+                            <span class="main-t1" aria-hidden="true">p</span><span class="main-t1" aria-hidden="true">o</span><span class="main-t1" aria-hidden="true">r</span><span class="main-t1" aria-hidden="true">t</span><span class="main-t1" aria-hidden="true">f</span><span class="main-t1" aria-hidden="true">o</span><span class="main-t1" aria-hidden="true">l</span><span class="main-t1" aria-hidden="true">i</span><span class="main-t1" aria-hidden="true">o</span>
+                        </p>
+                        <h1>Create publisher</h1>
+                        <p>
+                            <span class="main-t2">T</span><span class="main-t2">h</span><span class="main-t2">a</span><span class="main-t2">n</span><span class="main-t2">k</span>
+                            <span class="main-t2">y</span><span class="main-t2">o</span><span class="main-t2">u</span>
+                            <span class="main-t2">f</span><span class="main-t2">o</span><span class="main-t2">r</span>
+                            <span class="main-t2">v</span><span class="main-t2">i</span><span class="main-t2">s</span><span class="main-t2">i</span><span class="main-t2">t</span><span class="main-t2">i</span><span class="main-t2">n</span><span class="main-t2">g</span>
+                        </p>
+                    </div>
+                    <div class="main-img">
+                        <img src="assets/img/main-img.png" alt="메인이미지">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 소개 컨텐츠 -->
+        <section id="about">
+            <div class="container">
+                <!-- 소개 -->
+                <div class="about-cont1">
+                    <h2>About Me</h2>
+                    <div class="about-text-wrap">
+                        <div><span>완벽하지 않지만 신입의 열정적 자세와 꼼꼼한 성격을 장점으로 부족한 부분을 채우기 위해 끊임없이 노력하겠습니다.</span></div>
+                        <div><span>퍼블리셔로서 다양한 기술력과 안목을 높이기 위해 많은 웹 사이트와 APP을 접하고 공부하며 트랜드를 이해하고 성장하는 사람이 되겠습니다.</span></div>
+                    </div>
+                </div>
+                <!-- 장점 & 프로필 -->
+                <div class="content-box">
+                    <!-- 장점1 -->
+                    <div class="about-cont2">
+                        <div class="advan-img1">
+                            <img src="assets/img/about-img1-1.png" alt="장점1">
+                        </div>
+                        <div class="advan-text-wrap">
+                            <span>Advantages</span><br>
+                            <h3><span class="advan-t1">a</span><span class="advan-t1">t</span><span class="advan-t1">t</span><span class="advan-t1">e</span><span class="advan-t1">n</span><span class="advan-t1">t</span><span class="advan-t1">i</span><span class="advan-t1">v</span><span class="advan-t1">e</span></h3>
+                            <div>저는 실수를 줄이고 없애기 위해 세심하게 보는 편이며, 
+                                이러한 장점으로 어디를 가든 항상 신뢰를 받았습니다.
+                                또한, 세심한 성격 덕분에 동료들을 배려하고 잘 돕기도 합니다.
+                                그런 점은 결과적으로 팀워크에 좋은 영향을 주기도 합니다. 
+                                혹시라도 퍼블리셔로써 꼼꼼함이 작업 시 빠른 업무 처리의
+                                단점이 되지 않도록 스스로 시간을 체크하고 보완해 나가고 있습니다.
+                            </div>
+                            <div class="advan-btn">
+                                <a href="#none"><span>#세심한&nbsp;</span></a>
+                                <a href="#none"><span>#친절한&nbsp;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 장점2 -->
+                    <div class="about-cont3">
+                        <div class="advan-img1">
+                            <img src="assets/img/about-img2-1.png" alt="장점2">
+                        </div>
+                        <div class="advan-text-wrap">
+                            <span>Advantages</span><br>
+                            <h3><span class="advan-t2">p</span><span class="advan-t2">a</span><span class="advan-t2">s</span><span class="advan-t2">s</span><span class="advan-t2">i</span><span class="advan-t2">o</span><span class="advan-t2">n</span><span class="advan-t2">s</span></h3>
+                            <div>제가 가장 가치 있게 생각하는 것은 자기계발을 위해 노력하는 것입니다.
+                                처음엔 디자인을 배워볼 생각으로 시작하게 되었으나, 코딩을 접하게 되면서 사이트를 하나씩
+                                만들 때마다 신기하기도 하고 즐거움을 느끼게 되어 퍼블리셔의 길에 발을 들이게 되었습니다.
+                                아직은 부족한 부분이 많겠지만 신입으로써 열정을 가지고 계속해서 부족한 부분을 채우고
+                                배워나가며, 습득한 지식을 활용할 줄 아는 사람이 되겠습니다.
+                            </div>
+                            <div class="advan-btn">
+                                <a href="#none"><span>#노력&nbsp;</span></a>
+                                <a href="#none"><span>#열정적&nbsp;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 프로필 -->
+                    <div class="about-cont4">
+                        <div class="profile-img">
+                            <img src="assets/img/profile-img1.png" alt="프로필 이미지">
+                        </div>
+                        <div class="profile-text-wrap">
+                            <span>Profile</span><br>
+                            <h3><span>S</span><span>e</span><span>l</span><span>f</span><span>-</span><span>I</span><span>n</span><span>t</span><span>r</span><span>o</span><span>d</span><span>u</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span></h3>
+                            <div class="profile-text">
+                                <ul>
+                                    <li><em><span>NAME</span></em>김영지</li>
+                                    <li><em><span>AGE</span></em>1993.02</li>
+                                    <li><em><span>ADDRESS</span></em>경기도 수원시</li>
+                                    <li><em><span>HISTORY</span></em>
+                                        <ul>
+                                            <li>2019.08~2019.12     UI/UX 디자인 전문가 과정 수료</li>
+                                            <li>2020.04~2020.06 [한국시솔]웹디자인&퍼블리싱 경험</li>
+                                        </ul>
+                                    </li>
+                                    <li><em><span>CERTIFICATE</span></em>
+                                        <ul>
+                                            <li>컴퓨터 활용능력 2급</li>
+                                            <li>GTQ 1급 (2020)</li>
+                                            <li>웹디자인기능사(2020/09)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="profile-btn">
+                            <a href="#none"><span>resume</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <article id="skill-banner">
+            <div class="container">
+                <!-- 소개 -->
+                <div class="skill-banner-cont">
+                    <h2>just ask skill</h2>
+                    <div class="skill-banner-text-wrap">
+                        <!-- <div>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JAVASCRIPT</span>
+                            <span>JQUERY</span>
+                            <span>PHOTOSHOP</span>
+                            <span>ILLUSTRATOR</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- 스킬 컨텐츠 -->
+        <section id="skills">
+            <div class="container">
+                <div class="skills-cont">
+                    <h2>Business <span>Skills</span></h2>
+                    <div class="skills-text-wrap">
+                       <ul>
+                           <li>
+                               <div class="skill-box">
+                                    <div class="skill-hover"><em>HTML5</em>90%</div>
+                                    <div class="skill-back"><span>HTML5</span><img src="assets/img/skill-h5.png" alt="HTML5로고"></div>
+                               </div>
+                            </li>
+                           <li>
+                                <div class="skill-box">
+                                    <div class="skill-hover"><em>CSS3</em>90%</div>
+                                    <div class="skill-back"><span>CSS3</span><img src="assets/img/skill-c3.png" alt="CSS3로고"></div>
+                               </div>
+                           </li>
+                           <li>
+                                <div class="skill-box">
+                                    <div class="skill-hover"><em>Photoshop</em>90%</div>
+                                    <div class="skill-back"><span>Photoshop</span><img src="assets/img/skill-ps.png" alt="Photoshop로고"></div>
+                                </div>
+                            </li>
+                           <li>
+                                <div class="skill-box">
+                                    <div class="skill-hover"><em>Javascript</em>70%</div>
+                                    <div class="skill-back"><span>Javascript</span><img src="assets/img/skill-js.png" alt="Javascript로고"></div>
+                                </div>
+                            </li>
+                           <li>
+                                <div class="skill-box">
+                                    <div class="skill-hover"><em>Illustrator</em>70%</div>
+                                    <div class="skill-back"><span>Illustrator</span><img src="assets/img/skill-ai.png" alt="Illustrator로고"></div>
+                                </div>
+                            </li>
+                           <li>
+                                <div class="skill-box">
+                                    <div class="skill-hover"><em>WordPress</em>60%</div>
+                                    <div class="skill-back"><span>WordPress</span><img src="assets/img/skill-wp.png" alt="WordPress로고"></div>
+                                </div>
+                            </li>
+                       </ul>
+                       <div class="skills-img">
+                           <img src="assets/img/skill-img.png" alt="스킬화살표">
+                       </div>
+                        <!-- <div><em>HTML</em>90%</div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 포트폴리오 섹션으로 넘어가는 타이틀 -->
+        <section id="port1">
+            <div class="container">
+                <div class="port1-wrap">
+                    <div class="port-title">
+                        <div class="port-title-wrap">
+                            <h2>portfolio</h2>
+                            <p>hold on tight and check out our work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="port2">
+            <div class="container">
+                <div><!-- class="content-box"-->
+                    <div id="port2T" class="publi-wrap">
+                        <h2 class="publi-title"><span>Latest &nbsp; work</span></h2>
+                        <!-- 퍼블리싱 / 웹표준사이트 -->
+                        <div class="publi-box">
+                            <div class="publi-text-wrap">
+                                <span>Web standard</span>
+                                <h3><span>웹</span><span>표</span><span>준</span><span>&nbsp;</span><span>사</span><span>이</span><span>트</span></h3>
+                                <div class="publi-text">
+                                    웹표준과 웹접근성을 준수하여 작업한 웹표준 사이트 입니다. 
+                                    모든 사용자가 웹사이트 이용에 불편이 없도록 대체 텍스트를 넣었으며,
+                                    slick, light box 플러그인을 사용하여 동적인 효과를 주었습니다.
+                                </div>
+                                <div class="publi-btn">
+                                    <a href="http://www.yjshop.net/portfolio/standard/" title="웹표준사이트"><span>view more</span></a>
+                                </div>
+                            </div>
+                            <div class="publi-img">
+                                <a href="http://www.yjshop.net/portfolio/standard/" title="새 창으로 바로가기" target="_blank">
+                                    <svg class="publi-bg" viewBox="0 0 1920 1187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="1920" height="1187" fill="#1F1F1F"/>
+                                    </svg>
+                                    <!-- <img src="assets//img/publi-bg.jpg" alt="배경"aria-hidden="true"> -->
+                                    <img src="assets/img/publi-img3.png" alt="웹표준사이트">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- 퍼블리싱 / 반응형사이트 -->
+                        <div class="publi-box reverse">
+                            <div class="publi-text-wrap">
+                                <span class="reverse">Web Responsive</span>
+                                <h3><span>반</span><span>응</span><span>형</span><span>&nbsp;</span><span>사</span><span>이</span><span>트</span></h3>
+                                <div class="publi-text">
+                                    미디어 쿼리를 사용하여 다양한 디바이스 화면에 따라 반응하도록 
+                                    작업한 사이트 입니다.
+                                    slick슬라이드, 동영상, 이미지 마우스오버 애니메이션 
+                                    사용하여 동적효과를 주었습니다.
+                                </div>
+                                <div class="publi-btn">
+                                    <a href="http://www.yjshop.net/portfolio/responsive/" title="반응형사이트"><span>view more</span></a>
+                                </div>
+                            </div>
+                        
+                            <div class="publi-img">
+                                <a href="http://www.yjshop.net/portfolio/responsive/" title="새 창으로 바로가기" target="_blank">
+                                    <svg class="publi-bg" viewBox="0 0 1920 1187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="1920" height="1187" fill="#1F1F1F"/>
+                                    </svg>
+                                    <!-- <img src="assets//img/publi-bg.jpg" alt="배경" class="publi-bg" aria-hidden="true"> -->
+                                    <img src="assets/img/publi-img2.png" alt="반응형사이트">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 퍼블리싱 / 아마도사이트 -->
+                        <div class="publi-box">
+                            <div class="publi-text-wrap">
+                                <span>PC Website</span>
+                                <h3><span>그</span><span>누</span><span>보</span><span>드</span><span>5</span><span>&nbsp;</span><span>사</span><span>용</span><span>한</span><br>
+                                    <span>A</span><span>m</span><span>a</span><span>d</span><span>o</span><span>&nbsp;</span><span>사</span><span>이</span><span>트</span></h3>
+                                <div class="publi-text">
+                                    경기도 일자리 재단 UI/UX 전문가 과정 시 
+                                    제작한 포트폴리오로 기존 사이트 
+                                    디자인을 활용, PHP 및 그누보드 게시판 사용을 경험하였습니다.
+                                </div>
+                                <div class="publi-btn">
+                                    <a href="http://www.yjshop.net/g5/" title="아마도사이트"><span>view more</span></a>
+                                </div>
+                            </div>
+                        
+                            <div class="publi-img">
+                                <a href="http://www.yjshop.net/g5/" title="새 창으로 바로가기" target="_blank">
+                                    <svg class="publi-bg" viewBox="0 0 1920 1187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="1920" height="1187" fill="#1F1F1F"/>
+                                    </svg>
+                                    <!-- <img src="assets//img/publi-bg.jpg" alt="배경" class="publi-bg" aria-hidden="true"> -->
+                                    <img src="assets/img/publi-img4.png" alt="Amado 사이트">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 퍼블리싱 / 티스토리사이트 -->
+                        <div class="publi-box reverse">
+                            <div class="publi-text-wrap">
+                                <span class="reverse">PC Website</span>
+                                <h3><span>티</span><span>스</span><span>토</span><span>리</span><span>&nbsp;</span><span>사</span><span>이</span><span>트</span><br>
+                                    <span>(</span><span>그</span><span>누</span><span>보</span><span>드</span><span>연</span><span>동</span><span>)</span></h3>
+                                <div class="publi-text">
+                                    국내 사이트 디자인을 활용하여 그누보드 사용을 경험하였습니다.
+                                    메인페이지(개인작업), 로그인페이지(개인작업), 게시판, 뷰페이지,
+                                    글쓰기페이지 작업하였습니다.
+                                </div>
+                            
+                                <div class="publi-btn">
+                                    <a href="http://www.yjshop.net/t/" title="티스토리사이트"><span>view more</span></a>
+                                </div>
+                            </div>
+                            <div class="publi-img">
+                                <a href="http://www.yjshop.net/t/" title="새 창으로 바로가기" target="_blank">
+                                    <svg class="publi-bg" viewBox="0 0 1920 1187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="1920" height="1187" fill="#1F1F1F"/>
+                                    </svg>
+                                    <!-- <img src="assets//img/publi-bg.jpg" alt="배경" class="publi-bg" aria-hidden="true"> -->
+                                    <img src="assets/img/publi-img5.png" alt="티스토리사이트">
+                                </a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--애니메이션 스크립트 타이틀-->
+        <section id="port3">
+            <div class="container">
+                <div class="port3-wrap">
+                    <div class="port3-title">
+                        <div class="port3-title-wrap">
+                            <h2>works</h2>
+                            <p>please see my work animation and javascript</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="port4">
+            <div class="container">
+            <div class="port4-wrap">
+                <div class="ani-wrap">
+                    <div class="ani-title">
+                        <h2><span>Animation</span></h2>
+                    </div>
+                    <div class="ani-cont">
+                        <div class="ani-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/css_ani1/"></iframe>
+                        </div>
+                        <div class="ani-text">
+                            <h3>CSS animation</h3>
+                            <p>css animation 과 keyframes 만 이용하여 만든 애니메이션 입니다.</p>
+                        </div>
+                    </div>
+                    <div class="ani-cont">
+                        <div class="ani-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/text_ani1/"></iframe>
+                        </div>
+                        <div class="ani-text">
+                            <h3>TEXT animation</h3>
+                            <p>css animation 과 keyframes 만 이용하여 만든 텍스트 애니메이션 입니다.</p>
+                        </div>
+                    </div>
+                    <div class="ani-cont">
+                        <div class="ani-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/svg_ani1/"></iframe>
+                        </div>
+                        <div class="ani-text">
+                            <h3>SVG animation</h3>
+                            <p>Figma를 이용하여 svg를 만들고 간단한 keyframes으로 애니메이션 효과를 주었습니다.</p>
+                        </div>
+                    </div>
+                    <div class="ani-cont">
+                        <div class="ani-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/3d_ani1/"></iframe>
+                        </div>
+                        <div class="ani-text">
+                            <h3>3D animation</h3>
+                            <p>css의 transform-style:preserve-3d 로 3D입체 큐브를 만들고 회전 애니메이션 효과를 주었습니다.</p>
+                        </div>
+                    </div>
+                </div>
+             <!-- 애니메이션 자바스크립트 -->
+                <article id="work-banner">
+                    <div class="container">
+                        <div class="work-banner-cont">
+                            <h2>check out our work</h2>
+                            <div class="work-banner-text-wrap">
+                                <!-- <div>
+                                    <span>ANIMATION</span><span>JAVASCRIPT</span><span aria-hidden="true">ANIMATION</span><span aria-hidden="true">JAVASCRIPT</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <div class="script-wrap">
+                    <div class="script-title">
+                        <h2><span>Javascript</span></h2>
+                    </div>
+                    <div class="script-cont">
+                        <div class="script-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/Vanilla_Javascript1/"></iframe>
+                        </div>
+                        <div class="script-text">
+                            <h3>Momentum</h3>
+                            <p>Vanilla JS로 제작한 모멘텀(Momentum)</p>
+                        </div>
+                    </div>
+                    <div class="script-cont">
+                        <div class="script-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/game1/"></iframe>
+                        </div>
+                        <div class="script-text">
+                            <h3>지뢰찾기</h3>
+                            <p>javascript로 제작한 간단한 지뢰찾기 게임입니다.</p>
+                        </div>
+                    </div>
+                    <div class="script-cont">
+                        <div class="script-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/lotto/"></iframe>
+                        </div>
+                        <div class="script-text">
+                            <h3>로또 추첨기</h3>
+                            <p>랜덤으로 숫자를 배열에 담아 앞에 6개를 추출하여 순서대로 보여주고, 배열의 마지막 숫자를 보너스 숫자로 뽑는 방식의 로또 추첨기 입니다.</p>
+                        </div>
+                    </div>
+                    <div class="script-cont">
+                        <div class="script-img">
+                            <iframe src="https://yeong-ji.github.io/port_animation/painting/"></iframe>
+                        </div>
+                        <div class="script-text">
+                            <h3>그림판 만들기</h3>
+                            <p>canvas태그와 마우스이벤트를 이용하여 그래픽을 그리고 저장할 수 있는 그림판입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <!-- 연락 -->
+                <div class="contact-cont1">
+                    <h2>Contact Me</h2>
+                    <div class="contact-text-wrap">
+                        <div><span>스킬은 부족하겠지만 작업물과 저에 대한 소개에 집중 될 수 있었으면 하는 생각으로 사이트를 깔끔하게 만들기위해 노력하였습니다.</span></div>
+                        <div><span>부족한 부분이 있겠지만 떨리는 마음과 열정을 가지고 작업하였습니다. 좋은 피드백 부탁드립니다. 감사합니다.</span></div>
+                    </div>
+                </div>
+                <!-- 연락form -->
+                <div class="content-box">
+                    <div class="contact-cont2">
+                        <form action="fmail.php" method="post">
+                           <fieldset>
+                               <legend class="blind">연락 폼요소입니다.</legend>
+                               <input type="text" name="name" id="name" placeholder="Your Name">
+                               <input type="text" name="mail" id="mail" placeholder="Your Email">
+                               <textarea name="message" id="message" placeholder="Message를 입력해주세요."></textarea>
+                               <div class="contact-btn">
+                                <!-- <input type="submit" id="send" value="send message"> -->
+                                <button type="submit" id="send"><span>SEND</span></button>
+                                </div>
+                           </fieldset>
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="content-box">
+                <div class="ft-wrap">
+                    <div class="ft-logo">
+                        <a href="index3.html"><span>Yeong's</span></a>
+                    </div>
+                    <div class="ft-cont">
+                       <p>speak to a</p>
+                       <p><span>me</span> now!</p>
+                    </div>
+                    <div class="ft-text-wrap">
+                        <div class="ft-icon">
+                            <a href="https://blog.naver.com/rladudwl210"><i class="fa fa-bold" aria-hidden="true"></i></a>
+                            <a href="https://kyj210.gitbook.io/javascript/"><i class="fa fa-git" aria-hidden="true"></i></a>
+                        </div>
+                        <span>
+                            Kim Yeong Ji
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <address>
+                © 2021 yjshop. All rights reserved
+            </address>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- imagesload -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/script2.js"></script>
+    <script src="assets/js/scrollscript2.js"></script>
+    <!-- <?php 
+        echo '<pre>';
+        var_dump($_SESSION);
+        echo '</pre>';
+    ?> -->
+</body>
+</html>
