@@ -77,6 +77,28 @@
     }
     loading ();
 
+  
+    const cursor = document.querySelector(".cursor");
+
+    // 마우스 움직임 효과
+    document.addEventListener("mousemove", e => {
+        cursor.style.top = `${e.pageY}px`;
+        cursor.style.left = `${e.pageX}px`;
+    });
+   
+      //마우스 오버 효과
+    document.querySelectorAll(".mouse").forEach(elem => {
+        elem.addEventListener("mouseenter", () => {
+            cursor.classList.add("cursor_over");
+            document.querySelector("body").classList.add("cursor_over");
+        });
+        elem.addEventListener("mouseleave", () => {
+            cursor.classList.remove("cursor_over");
+            document.querySelector("body").classList.remove("cursor_over");
+        });
+    });
+
+
     //메뉴클릭 이벤트
     document.querySelector('#header .menu .hamburger').addEventListener('click', function(){
         document.querySelector('#header .menu').classList.add('close');

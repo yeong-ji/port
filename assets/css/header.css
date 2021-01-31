@@ -281,16 +281,36 @@
     display: inline-block;
     margin-left: 1.5vw;
     opacity: 0;
+    position: relative;
 }
 .sign li a {
     transition: color .3s ease;
 }
 .sign li a:hover {
-    color: #fff;
+    color: #000;
 }
 .sign li a i {
     vertical-align: text-top;
     margin-right: 3px;
+}
+.sign .php-icon {
+    position: absolute;
+    display: block;
+    font-size: 14px;
+    top: 35px;
+    transform: translateX(-50%);
+    padding: 6px 9px 3px;
+    border-radius: 6px 0;
+    background-color: #0EFF86;
+    left: 50%;
+    width: 5vh;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.sign li a:hover + .php-icon {
+    top: 25px;
+    opacity: 1;
 }
 @media (max-width:1220px) {
     #header .menu.close .nav ul li a {font-size: 7.5vw;} 

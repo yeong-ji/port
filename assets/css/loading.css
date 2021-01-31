@@ -83,7 +83,6 @@
     transform: rotateY(0deg) rotateX(0deg) translateZ(calc(32px * 3 * -1));
  
 }
-}
 
 @-webkit-keyframes box1 {
 0%, 50% {
