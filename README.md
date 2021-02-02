@@ -1,3 +1,3 @@
 # port
  portfolio
-https://github.com/yeong-ji/port/index3.html
+https://yeong-ji.github.io/port/index3.html
