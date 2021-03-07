@@ -36,6 +36,14 @@
 
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- 연락폼전송 -->
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_hl2eUG4vgNeBAeVGyK2cd");
+        })();
+    </script>
 </head>
 <body>
     <div class="cursor">
@@ -185,7 +193,7 @@
                         </div>
                         <div class="advan-text-wrap">
                             <span>Advantages</span><br>
-                            <h3><span class="advan-t2">p</span><span class="advan-t2">a</span><span class="advan-t2">s</span><span class="advan-t2">s</span><span class="advan-t2">i</span><span class="advan-t2">o</span><span class="advan-t2">n</span><span class="advan-t2">s</span></h3>
+                            <h3><span class="advan-t2">p</span><span class="advan-t2">a</span><span class="advan-t2">s</span><span class="advan-t2">s</span><span class="advan-t2">i</span><span class="advan-t2">o</span><span class="advan-t2">n</span></h3>
                             <div>제가 가장 가치 있게 생각하는 것은 자기계발을 위해 노력하는 것입니다.
                                 처음엔 디자인을 배워볼 생각으로 시작하게 되었으나, 코딩을 접하게 되면서 사이트를 하나씩
                                 만들 때마다 신기하기도 하고 즐거움을 느끼게 되어 퍼블리셔의 길에 발을 들이게 되었습니다.
@@ -544,11 +552,11 @@
                     </div>
                     <div class="script-cont">
                         <div class="script-img">
-                            <iframe src="https://yeong-ji.github.io/port_animation/game1/"></iframe>
+                            <iframe src="https://yeong-ji.github.io/port_animation/tictacioe/"></iframe>
                         </div>
                         <div class="script-text">
-                            <h3>지뢰찾기</h3>
-                            <p>javascript로 제작한 간단한 지뢰찾기 게임입니다.</p>
+                            <h3>틱택토</h3>
+                            <p>javascript로 제작한 틱택토 게임으로 컴퓨터와 대결하는 방식입니다.</p>
                         </div>
                     </div>
                     <div class="script-cont">
@@ -583,17 +591,37 @@
                         <div><span>부족한 부분이 있겠지만 떨리는 마음과 열정을 가지고 작업하였습니다. 좋은 피드백 부탁드립니다. 감사합니다.</span></div>
                     </div>
                 </div>
-                <!-- 연락form -->
+                <!-- 연락form 한달200건 무료-->
+                <script>
+                    window.onload = function() {
+                        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            // generate a five digit number for the contact_number variable
+                            this.contact_number.value = Math.random() * 100000 | 0;
+                            // these IDs from the previous steps
+                            emailjs.sendForm('kyj210', 'template_h7n4mht', this)
+                                .then(function() {
+                                    console.log('SUCCESS!');
+                                    document.querySelector("#name").value = "";
+                                    document.querySelector("#mail").value = "";
+                                    document.querySelector("#message").value = "";
+                                }, function(error) {
+                                    console.log('FAILED...', error);
+                                });
+                        });
+                    }
+                </script>
                 <div class="content-box">
                     <div class="contact-cont2">
-                        <form action="fmail.php" method="post">
+                        <form id="contact-form">
                            <fieldset>
                                <legend class="blind">연락 폼요소입니다.</legend>
-                               <input type="text" name="name" id="name" placeholder="Your Name">
-                               <input type="text" name="mail" id="mail" placeholder="Your Email">
+                               <input type="hidden" name="contact_number">
+                               <input type="text" name="to_name" id="name" placeholder="Your Name">
+                               <input type="text" name="from_name" id="mail" placeholder="Your Email">
                                <textarea name="message" id="message" placeholder="Message를 입력해주세요."></textarea>
                                <div class="contact-btn">
-                                <!-- <input type="submit" id="send" value="send message"> -->
+                                <!-- <input type="button" name="submit" id="send" value="SEND"/> -->
                                 <button type="submit" id="send"><span>SEND</span></button>
                                 </div>
                            </fieldset>
